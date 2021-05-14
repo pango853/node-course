@@ -29,4 +29,4 @@ const chalk = require('chalk')
 const log = console.log;
 
 log(chalk.green('Success!'))
-log(chalk.green.bold.inverse('Success!'))
+log(chalk.red.bold.inverse('Error!'))

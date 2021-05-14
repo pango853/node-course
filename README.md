@@ -13,6 +13,11 @@ The Complete Node.js Developer Course (3rd Edition)
 
 # Setup
 ```
-npm install
-```
+// Install global modules
+npm install nodemon@1.18.5 -g
 
+npm install
+
+node app.js
+nodemon app.js
+```

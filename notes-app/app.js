@@ -18,3 +18,15 @@ console.log(sum)
 const getNotes = require('./notes.js')
 const notes = getNotes()
 console.log(notes)
+
+const validator = require('validator')
+console.log(validator.isEmail('iam@pango.chan'))
+console.log(validator.isURL('https://yahoo.com'))
+
+// Challenge: Use the chalk library in your project
+// npm install chalk@4.1.1
+const chalk = require('chalk')
+const log = console.log;
+
+log(chalk.green('Success!'))
+log(chalk.green.bold.inverse('Success!'))

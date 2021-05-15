@@ -16,12 +16,16 @@ The Complete Node.js Developer Course (3rd Edition)
 // Install global modules
 npm install nodemon@1.18.5 -g
 
-npm install
+cd notes-app
+	npm install
 
-node app.js
-nodemon app.js
+	node app.js
+	nodemon app.js
 
-node app-console.js --version
-node app-console.js --help
-node app-console.js add --title="My First Note" --body="This is my first note."
+	node app-console.js --version
+	node app-console.js --help
+	node app-console.js add --title="My First Note" --body="This is my first note."
+
+cd ../playground
+	node 1-json.js
 ```

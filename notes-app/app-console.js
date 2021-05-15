@@ -70,8 +70,18 @@ yargs.command({
 yargs.command({
     command: 'read',
     describe: 'Read a note',
-    handler: function() {
-        log('Reading a note')
+    builder:{
+        title: {
+            describe: 'Note title',
+            demandOption: true,
+            type: 'string'
+        }
+    },
+    handler: function(argv) {
+        const isSucc = notes.readNote(argv.title)
+        if(!isSucc) {
+            log(chalk.red.inverse('No note found!'))
+        }
     }
 })
 

@@ -4,9 +4,12 @@ const getNotes = () => 'Your notes...'
 
 const addNote = function(title, body) {
     const notes = loadNotes()
-    const duplicateNotes = notes.filter((note) => note.title === title)
-    console.log(duplicateNotes)
-    if (duplicateNotes.length === 0) {
+
+    // This will scan the whole list
+    //const duplicateNotes = notes.filter((note) => note.title === title)
+    const duplicateNote = notes.find((note) => note.title === title)
+    console.log(duplicateNote)
+    if (duplicateNote === undefined) {
         notes.push({
             title: title,
             body: body
@@ -56,9 +59,21 @@ const listNotes = function() {
     })
 }
 
+// Challenge: Wire up read command
+const readNote = function(title) {
+    const note = loadNotes().find((note) => note.title === title)
+    if(note){
+        console.log(note.body)
+        return true
+    } else {
+        return false
+    }
+}
+
 module.exports = {
     getNotes: getNotes,
     addNote: addNote,
     removeNote: removeNote,
-    listNotes: listNotes
+    listNotes: listNotes,
+    readNote: readNote
 }

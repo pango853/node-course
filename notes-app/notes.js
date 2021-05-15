@@ -1,14 +1,10 @@
 const fs = require('fs')
 
-const getNotes = function () {
-    return 'Your notes...'
-}
+const getNotes = () => 'Your notes...'
 
 const addNote = function(title, body) {
     const notes = loadNotes()
-    const duplicateNotes = notes.filter(function (note){
-        return note.title === title
-    })
+    const duplicateNotes = notes.filter((note) => note.title === title)
     console.log(duplicateNotes)
     if (duplicateNotes.length === 0) {
         notes.push({
@@ -42,9 +38,7 @@ const saveNotes = function(notes) {
 // Challenge: Wire up removeNote
 const removeNote = function(title) {
     const notes = loadNotes()
-    const notesToKeep = notes.filter(function(note) {
-        return note.title !== title
-    })
+    const notesToKeep = notes.filter((note) => note.title !== title)
  
     if(notesToKeep.length < notes.length){
         console.log('Removed ' + (notes.length - notesToKeep.length) + ' note(s).')

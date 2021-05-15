@@ -63,7 +63,8 @@ yargs.command({
     command: 'list',
     describe: 'List notes',
     handler: function() {
-        log('Listing the notes')
+        log(chalk.green('Your notes'))
+        notes.listNotes()
     }
 })
 yargs.command({

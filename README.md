@@ -25,6 +25,7 @@ cd notes-app
 	node app-console.js --version
 	node app-console.js --help
 	node app-console.js add --title="My First Note" --body="This is my first note."
+	node app-console.js remove --title="My First Note"
 
 cd ../playground
 	node 1-json.js

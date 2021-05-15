@@ -15,7 +15,7 @@ const addNote = function(title, body) {
             title: title,
             body: body
         })
-    
+
         saveNotes(notes)
         console.log('New note added!')
     } else {
@@ -39,7 +39,29 @@ const saveNotes = function(notes) {
     fs.writeFileSync('notes.json', dataJSON)
 }
 
+// Challenge: Wire up removeNote
+const removeNote = function(title) {
+    const notes = loadNotes()
+    const found = notes.filter(function(note) {
+        return note.title === title
+    })
+    const newNotes = notes.filter(function(note) {
+        return note.title !== title
+    })
+ 
+    if(found.length === 1){
+        console.log('Found', found)
+        found[0].title = 'removed'
+
+        newNotes.push(found)
+        saveNotes(newNotes)        
+    } else {
+        console.log('Note note found!')
+    }
+}
+
 module.exports = {
     getNotes: getNotes,
-    addNote: addNote
+    addNote: addNote,
+    removeNote: removeNote
 }

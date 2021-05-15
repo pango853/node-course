@@ -27,7 +27,13 @@ yargs.command({
         //log('Adding a new note!', argv)
         //log('Title: ' + argv.title)
         //log('Body: ' + argv.body)
-        notes.addNote(argv.title, argv.body)
+        const isAdded = notes.addNote(argv.title, argv.body)
+
+        if(isAdded) {
+            log(chalk.green.inverse('New note added!'))
+        } else {
+            log(chalk.red.inverse('Note title taken!'))
+        }
     }
 })
 
@@ -43,7 +49,12 @@ yargs.command({
         }
     },
     handler: function(argv){
-        notes.removeNote(argv.title)
+        const isRemoved = notes.removeNote(argv.title)
+        if(isRemoved) {
+            log(chalk.green.inverse('Note removed!'))
+        } else {
+            log(chalk.red.inverse('No note found!'))
+        }
     }
 })
 

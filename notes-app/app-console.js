@@ -6,12 +6,27 @@ const log = console.log
 // Customize yargs version
 yargs.version('1.1.0')
 
+// Challenge: Add an option to yargs
 // Create add command
 yargs.command({
     command: 'add',
     describe: 'Add a new note',
-    handler: function() {
-        log('Adding a note')
+    builder: {
+        title: {
+            describe: 'Note title',
+            demandOption: true,
+            type: 'string'
+        },
+        body: {
+            describe: 'Note body',
+            demandOption: true,
+            type: 'string'
+        }
+    },
+    handler: function(argv) {
+        log('Adding a new note!', argv)
+        log('Title: ' + argv.title)
+        log('Body: ' + argv.body)
     }
 })
 
@@ -40,4 +55,5 @@ yargs.command({
     }
 })
 
-console.log(yargs.argv)
+//console.log(yargs.argv)
+yargs.parse() // MUST run parse() or argv to initialize yargs

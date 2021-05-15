@@ -20,4 +20,8 @@ npm install
 
 node app.js
 nodemon app.js
+
+node app-console.js --version
+node app-console.js --help
+node app-console.js add --title="My First Note" --body="This is my first note."
 ```

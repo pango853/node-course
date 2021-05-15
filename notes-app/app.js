@@ -30,3 +30,5 @@ const log = console.log;
 
 log(chalk.green('Success!'))
 log(chalk.red.bold.inverse('Error!'))
+
+log(process.argv[2])

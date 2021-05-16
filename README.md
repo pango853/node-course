@@ -9,6 +9,8 @@ The Complete Node.js Developer Course (3rd Edition)
 - event-driven, non-blocking I/O model
 - search for npm modules at npmjs.com
 	> npm install validator@13.6.0
+- debugger via `node inspect`, DevTools(chrome://inspect)
+	TIPS: `esc` key to show console on chrome DevTools
 
 
 # Setup
@@ -19,13 +21,17 @@ npm install nodemon@1.18.5 -g
 cd notes-app
 	npm install
 
-	node app.js
-	nodemon app.js
+	node app-example.js
+	nodemon app-example.js
 
-	node app-console.js --version
-	node app-console.js --help
-	node app-console.js add --title="My First Note" --body="This is my first note."
-	node app-console.js remove --title="My First Note"
+	node app.js --version
+	node app.js --help
+	node app.js add --title="My First Note" --body="This is my first note."
+	node app.js remove --title="My First Note"
+
+	node inspect app.js add --title="My First Note" --body="This is my first note."
+		debug> restart
+	node --inspect-brk app.js add --title="My First Note" --body="This is my first note."
 
 cd ../playground
 	node 1-json.js

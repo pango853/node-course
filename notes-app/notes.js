@@ -8,7 +8,10 @@ const addNote = function(title, body) {
     // This will scan the whole list
     //const duplicateNotes = notes.filter((note) => note.title === title)
     const duplicateNote = notes.find((note) => note.title === title)
-    console.log(duplicateNote)
+
+    //console.log(duplicateNote)
+    debugger
+
     if (duplicateNote === undefined) {
         notes.push({
             title: title,

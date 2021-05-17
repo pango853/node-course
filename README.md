@@ -41,7 +41,6 @@ cd ../playground
 ```
 
 # TODO
-Customizing HTTP Requests
 An HTTP Request Challenge
 Handling Errors
 The Callback Function

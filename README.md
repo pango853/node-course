@@ -11,7 +11,7 @@ The Complete Node.js Developer Course (3rd Edition)
 	> npm install validator@13.6.0
 - debugger via `node inspect`, DevTools(chrome://inspect)
 	TIPS: `esc` key to show console on chrome DevTools
-
+- Asynchronous process flow: setTimeout(..., 2000) at Call Stack-> register via `Node APIs` (afterward C++ world) -> hand over to Callback Queue -> Event Loop then move Callback to Call Stack and get called (back to js)
 
 # Setup
 ```
@@ -36,3 +36,16 @@ cd notes-app
 cd ../playground
 	node 1-json.js
 ```
+
+# TODO
+Making HTTP Requests - play with darksky.net or weatherstack.com
+Customizing HTTP Requests
+An HTTP Request Challenge
+Handling Errors
+The Callback Function
+Callback Abstraction
+Callback Abstraction Challenge
+Callback Chaining
+ES6 Aside: Object Property Shorthand
+Destructuring and Property Shorthand
+Bonus: HTTP Requests without a Library

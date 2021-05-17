@@ -8,10 +8,13 @@ The Complete Node.js Developer Course (3rd Edition)
 - `process.exit()`
 - event-driven, non-blocking I/O model
 - search for npm modules at npmjs.com
+	> npm init -y
 	> npm install validator@13.6.0
 - debugger via `node inspect`, DevTools(chrome://inspect)
 	TIPS: `esc` key to show console on chrome DevTools
 - Asynchronous process flow: setTimeout(..., 2000) at Call Stack-> register via `Node APIs` (afterward C++ world) -> hand over to Callback Queue -> Event Loop then move Callback to Call Stack and get called (back to js)
+- `request` is not deprecated. Now it's fork is `postman-request`
+
 
 # Setup
 ```
@@ -38,7 +41,6 @@ cd ../playground
 ```
 
 # TODO
-Making HTTP Requests - play with darksky.net or weatherstack.com
 Customizing HTTP Requests
 An HTTP Request Challenge
 Handling Errors

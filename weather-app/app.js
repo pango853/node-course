@@ -32,4 +32,6 @@ request({url: url2, json: true}, (error, response) => {
  * 1. First you have to register a Free plan at weatherstack.com
  * 2. Mark down the access key
  * 3. Try access http://api.weatherstack.com/current?access_key=xxxxxxxxxxxxxxxxx&query=37.8267,-122.4233
+ * 
+ * Do the same to get another one for Mapbox
  */

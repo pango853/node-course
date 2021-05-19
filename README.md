@@ -14,6 +14,8 @@ The Complete Node.js Developer Course (3rd Edition)
 	TIPS: `esc` key to show console on chrome DevTools
 - Asynchronous process flow: setTimeout(..., 2000) at Call Stack-> register via `Node APIs` (afterward C++ world) -> hand over to Callback Queue -> Event Loop then move Callback to Call Stack and get called (back to js)
 - `request` is not deprecated. Now it's fork is `postman-request`
+- create web server with `express`, expressjs.com
+	> npm install express --save
 
 
 # Setup
@@ -40,13 +42,12 @@ cd ../playground
 	node 1-json.js
 
 cd ../weather-app
+	npm install
 	node app.js YOUR_WEATHERSTACK_ACCESS_KEY YOUR_MAPBOX_ACCESS_TOKEN "Kuala Lumpur"
 
 ```
 
 # TODO
-Web Server
-Hello Express!
 Serving up HTML and JSON
 Serving up Static Assets
 Serving up CSS, JS, Images, and More

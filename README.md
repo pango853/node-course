@@ -38,15 +38,13 @@ cd notes-app
 
 cd ../playground
 	node 1-json.js
+
+cd ../weather-app
+	node app.js YOUR_WEATHERSTACK_ACCESS_KEY YOUR_MAPBOX_ACCESS_TOKEN "Kuala Lumpur"
+
 ```
 
 # TODO
-An HTTP Request Challenge
-Handling Errors
-The Callback Function
-Callback Abstraction
-Callback Abstraction Challenge
-Callback Chaining
 ES6 Aside: Object Property Shorthand
 Destructuring and Property Shorthand
 Bonus: HTTP Requests without a Library

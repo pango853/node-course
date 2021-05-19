@@ -4,6 +4,7 @@ const forecast = require('./utils/forecast')
 
 const weatherstack_access_key = process.argv[2]
 const mapbox_access_token = process.argv[3]
+const address = process.argv[4]
 
 // const url = 'http://api.weatherstack.com/forecast?access_key=' + weatherstack_access_key + '&query=Kuala Lumpur&hourly=1&units=f'
 // request({url: url, json: true}, (error, response) => {
@@ -38,22 +39,25 @@ const mapbox_access_token = process.argv[3]
 //     }
 // })
 
-// Challenge: 
-
-geocode('Kuala Lumpur', mapbox_access_token, (err, data) => {
-    debugger
-
-    if (err) {
-        return console.log(err)
-    }
-    forecast(data.latitude, data.longitude, weatherstack_access_key, (err, data) => {
+// Challenge: Accept location via command line argument
+if (!address){
+    console.log('Please provide an address')
+} else {
+    geocode(address, mapbox_access_token, (err, data) => {
         debugger
-
+    
         if (err) {
             return console.log(err)
         }
-
-        console.log('Error', err)
-        console.log('Data', data)
-    })
-})
+        forecast(data.latitude, data.longitude, weatherstack_access_key, (err, forecastData) => {
+            debugger
+    
+            if (err) {
+                return console.log(err)
+            }
+    
+            console.log(data.location)
+            console.log(forecastData)
+        })
+    })    
+}

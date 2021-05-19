@@ -45,6 +45,52 @@ cd ../weather-app
 ```
 
 # TODO
-ES6 Aside: Object Property Shorthand
-Destructuring and Property Shorthand
-Bonus: HTTP Requests without a Library
+Web Server
+Hello Express!
+Serving up HTML and JSON
+Serving up Static Assets
+Serving up CSS, JS, Images, and More
+Dynamic Pages with Templating
+Customizing the Views Diectory
+Advanced Templating
+404 Pages
+Styling the Application
+Accessing API from Browser
+The Query String
+Building a JSON HTTP endpoing
+ES6 Aside: Default Function Pasrameters
+Browser HTTP Requests with Fetch
+Creating a Search Form
+Wiring up the User Interface
+Application Deployment
+Joining Heroku and GitHub
+Exploring Git
+Integrating Git
+Deploying Node.js to Heroku
+New Feature Deployument Workflow
+Avoiding Global Modules
+MongoDB and Promises for a Task App
+MongoDB and NoSQL Databases
+Installing Database GUI Viewer
+Connecting and inserting documents
+The ObjectID
+Querying documents
+Promises
+Updating documents
+Deleting documents
+REST APIs and Mongoose
+Data validation and sanitization
+Structuring a REST API
+Installing Postman
+Resource creation endpoints
+Promise chaining
+Async/Await
+Resource Updating Endpoints
+Resource Deleting Endpoints
+Separate Route Files
+API Authentication and Security
+Storing, Pagination, and Filtering
+File Uploads
+Sending Emails
+Testing Node.js
+Real-Time Web Application with Socket.io

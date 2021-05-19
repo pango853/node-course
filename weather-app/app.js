@@ -39,24 +39,26 @@ const address = process.argv[4]
 //     }
 // })
 
+// Challenge: Use both destructuring and property shorthand
+
 // Challenge: Accept location via command line argument
 if (!address){
     console.log('Please provide an address')
 } else {
-    geocode(address, mapbox_access_token, (err, data) => {
+    geocode(address, mapbox_access_token, (err, {latitude, longitude, location} = {}) => { // add '= {}' to use default when there is no response
         debugger
     
         if (err) {
             return console.log(err)
         }
-        forecast(data.latitude, data.longitude, weatherstack_access_key, (err, forecastData) => {
+        forecast(latitude, longitude, weatherstack_access_key, (err, forecastData) => {
             debugger
     
             if (err) {
                 return console.log(err)
             }
     
-            console.log(data.location)
+            console.log(location)
             console.log(forecastData)
         })
     })    

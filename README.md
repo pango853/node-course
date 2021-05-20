@@ -48,7 +48,6 @@ cd ../weather-app
 ```
 
 # TODO
-Customizing the Views Diectory
 Advanced Templating
 404 Pages
 Styling the Application

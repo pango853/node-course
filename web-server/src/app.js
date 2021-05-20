@@ -5,10 +5,15 @@ console.log(__dirname)
 console.log(__filename)
 
 const app = express()
-const publicDir = path.join(__dirname, '../public')
+const publicPath = path.join(__dirname, '../public')
+const viewsPath = path.join(__dirname, '../templates')
 
-app.set('view engine', 'hbs') // set handlebars(hbs) as view template engine
-app.use(express.static(publicDir))
+// Set handlebars(hbs) as view template engine, and views location
+app.set('view engine', 'hbs')
+app.set('views', viewsPath)
+
+// Set static directory to serve
+app.use(express.static(publicPath))
 
 // example.com
 app.get('', (req, res) => {

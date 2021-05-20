@@ -48,7 +48,6 @@ cd ../weather-app
 ```
 
 # TODO
-Dynamic Pages with Templating
 Customizing the Views Diectory
 Advanced Templating
 404 Pages

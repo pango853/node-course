@@ -7,11 +7,16 @@ console.log(__filename)
 const app = express()
 const publicDir = path.join(__dirname, '../public')
 
+app.set('view engine', 'hbs') // set handlebars(hbs) as view template engine
 app.use(express.static(publicDir))
 
 // example.com
 app.get('', (req, res) => {
-    res.send('<h1>Weather</h1>')
+    //res.send('<h1>Weather</h1>')
+    res.render('index', {
+        title: 'Weather App',
+        name: 'Andrew Mead'
+    })
 })
 
 // example.com/help

@@ -16,7 +16,8 @@ The Complete Node.js Developer Course (3rd Edition)
 - `request` is not deprecated. Now it's fork is `postman-request`
 - create web server with `express`, expressjs.com
 	> npm install express --save
-
+- nodemon by default will only restart when there is any .js file got changed
+	> npm src/app.js -e js,hbs
 
 # Setup
 ```
@@ -48,7 +49,6 @@ cd ../weather-app
 ```
 
 # TODO
-Advanced Templating
 404 Pages
 Styling the Application
 

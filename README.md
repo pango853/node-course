@@ -49,7 +49,6 @@ cd ../weather-app
 ```
 
 # TODO
-404 Pages
 Styling the Application
 
 Accessing API from Browser

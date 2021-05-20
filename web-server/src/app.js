@@ -48,6 +48,25 @@ app.get('/weather', (req, res) => {
     res.send('Weather page')
 })
 
+// Challenge: Create and render a 404 page with handlebars
+
+app.get('/admin/*', (req, res) => {
+    res.render('404', {
+        title: '404',
+        name: 'Andrew Mead',
+        errorMessage: 'I am not gonna tell you the page is not found'
+    })
+})
+
+// Match everything else and show 404 page
+app.get('*', (req, res) => {
+    res.render('404', {
+        title: '404',
+        name: 'Andrew Mead',
+        errorMessage: 'Page not found'
+    })
+})
+
 app.listen(3000, () => {
     console.log('Server is up on port 3000')
 })

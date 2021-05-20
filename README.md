@@ -49,8 +49,6 @@ cd ../weather-app
 ```
 
 # TODO
-Styling the Application
-
 Accessing API from Browser
 The Query String
 Building a JSON HTTP endpoing

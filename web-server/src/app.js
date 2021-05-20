@@ -1,15 +1,26 @@
+const path = require('path')
 const express = require('express')
 
+console.log(__dirname)
+console.log(__filename)
+
 const app = express()
+const publicDir = path.join(__dirname, '../public')
+
+app.use(express.static(publicDir))
 
 // example.com
 app.get('', (req, res) => {
-    res.send('Hello express!')
+    res.send('<h1>Weather</h1>')
 })
 
 // example.com/help
 app.get('/help', (req, res) => {
-    res.send('Help page')
+    res.send([{ // can specify JSON
+        name: 'Andrew'
+    },{
+        name: 'Sarah'
+    }])
 })
 
 // Challenge: Setup two new routes

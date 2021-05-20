@@ -48,14 +48,12 @@ cd ../weather-app
 ```
 
 # TODO
-Serving up HTML and JSON
-Serving up Static Assets
-Serving up CSS, JS, Images, and More
 Dynamic Pages with Templating
 Customizing the Views Diectory
 Advanced Templating
 404 Pages
 Styling the Application
+
 Accessing API from Browser
 The Query String
 Building a JSON HTTP endpoing

@@ -49,7 +49,6 @@ cd ../weather-app
 ```
 
 # TODO
-Browser HTTP Requests with Fetch
 Creating a Search Form
 Wiring up the User Interface
 

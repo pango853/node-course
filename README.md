@@ -49,11 +49,11 @@ cd ../weather-app
 ```
 
 # TODO
-Building a JSON HTTP endpoing
 ES6 Aside: Default Function Pasrameters
 Browser HTTP Requests with Fetch
 Creating a Search Form
 Wiring up the User Interface
+
 Application Deployment
 Joining Heroku and GitHub
 Exploring Git

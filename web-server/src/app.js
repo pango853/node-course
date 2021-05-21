@@ -2,6 +2,13 @@ const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
 
+const geocode = require('./utils/geocode')
+const forecast = require('./utils/forecast')
+
+// Parse arguments
+const weatherstack_access_key = process.argv[2]
+const mapbox_access_token = process.argv[3]
+
 console.log(__dirname)
 console.log(__filename)
 
@@ -45,19 +52,31 @@ app.get('/about', (req, res) => {
 })
 
 // Challenge: Update weather endpoint to accept address
+// Challenge: Wire up /weather
 
 app.get('/weather', (req, res) => {
-
     if (!req.query.address) {
-        return res.send({
-            error: 'You must provide a address term'
-        })
-    }
+        return res.send({ error: 'You must provide a address term' })
+    } else {
+        const address = req.query.address
 
-    res.send({
-        forecast: 'It is snowing',
-        location: req.query.address
-    })
+        geocode(address, mapbox_access_token, (err, {latitude, longitude, location} = {}) => {
+            if (err) {
+                return res.send({ error: err })        
+            }
+            forecast(latitude, longitude, weatherstack_access_key, (err, forecastData) => {
+                if (err) {
+                    return res.send({ error: err })        
+                }
+
+                res.send({
+                    forecast: forecastData,
+                    location: location,
+                    address: address
+                })
+            })
+        })    
+    }
 })
 
 app.get('/products', (req, res) => {

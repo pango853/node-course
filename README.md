@@ -49,7 +49,6 @@ cd ../weather-app
 ```
 
 # TODO
-Creating a Search Form
 Wiring up the User Interface
 
 Application Deployment

@@ -49,8 +49,6 @@ cd ../weather-app
 ```
 
 # TODO
-Wiring up the User Interface
-
 Application Deployment
 Joining Heroku and GitHub
 Exploring Git

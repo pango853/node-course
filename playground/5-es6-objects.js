@@ -34,9 +34,10 @@ const transaction = (type, myProduct) => {
     const { label } = myProduct // destructuring here
     console.log(type, label, stock)
 }
-const transaction2 = (type, {label, stock}) => { // destructuring here
+const transaction2 = (type, {label, stock} = {}) => { // destructuring here
     console.log(type, label, stock)
 }
 
 transaction('order', product)
 transaction2('order2', product)
+transaction2('order2') // cannot destructure undefined, but we could set default as {} up there

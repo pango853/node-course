@@ -49,7 +49,6 @@ cd ../weather-app
 ```
 
 # TODO
-ES6 Aside: Default Function Pasrameters
 Browser HTTP Requests with Fetch
 Creating a Search Form
 Wiring up the User Interface

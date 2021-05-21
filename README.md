@@ -49,8 +49,6 @@ cd ../weather-app
 ```
 
 # TODO
-Accessing API from Browser
-The Query String
 Building a JSON HTTP endpoing
 ES6 Aside: Default Function Pasrameters
 Browser HTTP Requests with Fetch

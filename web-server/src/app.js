@@ -44,8 +44,34 @@ app.get('/about', (req, res) => {
     res.send('About page')
 })
 
+// Challenge: Update weather endpoint to accept address
+
 app.get('/weather', (req, res) => {
-    res.send('Weather page')
+
+    if (!req.query.address) {
+        return res.send({
+            error: 'You must provide a address term'
+        })
+    }
+
+    res.send({
+        forecast: 'It is snowing',
+        location: req.query.address
+    })
+})
+
+app.get('/products', (req, res) => {
+    console.log(req.query)
+
+    if (!req.query.search) {
+        return res.send({
+            error: 'You must provide a search term'
+        })
+    }
+    res.send({
+        product: [],
+        category: []
+    })
 })
 
 // Challenge: Create and render a 404 page with handlebars

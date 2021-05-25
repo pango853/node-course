@@ -65,11 +65,11 @@ Deploying Node.js to Heroku
 New Feature Deployument Workflow
 Avoiding Global Modules
 
-The ObjectID
 Querying documents
 Promises
 Updating documents
 Deleting documents
+
 REST APIs and Mongoose
 Data validation and sanitization
 Structuring a REST API

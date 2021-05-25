@@ -65,7 +65,6 @@ Deploying Node.js to Heroku
 New Feature Deployument Workflow
 Avoiding Global Modules
 
-Querying documents
 Promises
 Updating documents
 Deleting documents

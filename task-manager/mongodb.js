@@ -72,5 +72,53 @@ MongoClient.connect(connectionURL, { userNewUrlParser: true }, (error, client) =
     })
     // test: db.getCollection('tasks).find({})
 
+    db.collection('users').findOne({ name: 'Jen' }, (error, user) => {
+        if (error) {
+            return console.log('Unable to fetch')
+        }
+
+        console.log(user)
+    })
+    
+    db.collection('users').findOne({ _id: new ObjectID('60ad2d5467c7013264119ec9') }, (error, user) => {
+        if (error) {
+            return console.log('Unable to fetch')
+        }
+
+        console.log(user)
+    })
+
+    const cursor = db.collection('users').find({ age: 27 }) // find() returns the Cursor
+    cursor.toArray((error, users) => {
+        if (error) {
+            return console.log('Unable to fetch')
+        }
+
+        console.log(users)
+    })
+    cursor.count((error, count) => { // you can count without fetching all the data
+        if (error) {
+            return console.log('Unable to count')
+        }
+
+        console.log(count)
+    })
+
+    // Challenge: Use find and findOne with tasks
+    db.collection('tasks').findOne({_id: new ObjectID('60ad3301123b74285807ee9d')}, (error, task) => {
+        if (error) {
+            return console.log('Unable to fetch')
+        }
+
+        console.log(task)
+    })
+    db.collection('tasks').find({completed: false}).toArray((error, tasks) => {
+        if (error) {
+            return console.log('Unable to fetch')
+        }
+
+        console.log(tasks)
+    })
+
 })
 

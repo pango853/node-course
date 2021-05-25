@@ -27,5 +27,42 @@ MongoClient.connect(connectionURL, { userNewUrlParser: true }, (error, client) =
     })
     // test: db.getCollection('users').find({})
 
+    db.collection('users').insertMany([
+        {
+            name: 'Jen',
+            age: 28
+        }, {
+            name: 'Gunther',
+            age: 27
+        }
+    ], (error, result) => {
+        if (error) {
+            return console.log('Unable to insert documents')
+        }
+
+        console.log(result.ops)
+    })
+
+    // Challenge: Insert 3 tasks into a new tasks collection
+    db.collection('tasks').insertMany([
+        {
+            description: 'Clean the house',
+            completed: true
+        }, {
+            description: 'Renew inspection',
+            completed: false
+        }, {
+            description: 'Pot plant',
+            completed: false
+        }
+    ], (error, result) => {
+        if (error) {
+            return console.log('Unable to insert documents')
+        }
+
+        console.log(result.ops)
+    })
+    // test: db.getCollection('tasks).find({})
+
 })
 

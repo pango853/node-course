@@ -18,6 +18,10 @@ The Complete Node.js Developer Course (3rd Edition)
 	> npm install express --save
 - nodemon by default will only restart when there is any .js file got changed
 	> npm src/app.js -e js,hbs
+- 
+	Installing Database GUI Viewer
+
+
 
 # Setup
 ```
@@ -45,8 +49,12 @@ cd ../playground
 cd ../weather-app
 	npm install
 	node app.js YOUR_WEATHERSTACK_ACCESS_KEY YOUR_MAPBOX_ACCESS_TOKEN "Kuala Lumpur"
+```
 
 ```
+npm i mongodb@3.6.8
+```
+
 
 # TODO
 Application Deployment
@@ -56,10 +64,7 @@ Integrating Git
 Deploying Node.js to Heroku
 New Feature Deployument Workflow
 Avoiding Global Modules
-MongoDB and Promises for a Task App
-MongoDB and NoSQL Databases
-Installing Database GUI Viewer
-Connecting and inserting documents
+
 The ObjectID
 Querying documents
 Promises

@@ -120,5 +120,35 @@ MongoClient.connect(connectionURL, { userNewUrlParser: true }, (error, client) =
         console.log(tasks)
     })
 
+    const updatePromise  = db.collection('users').updateOne({
+        _id: new ObjectID(id.toHexString())
+    }, {
+        $set: {
+            name: 'Mike'
+        },
+        $inc: {
+            age: 1
+        }
+    })
+
+    updatePromise.then((result) => {
+        console.log(result)
+    })
+    updatePromise.catch((error) => {
+        console.log(error)
+    })
+
+    // Challenge: Use updateMany to complete all tasks
+    db.collection('tasks').updateMany({
+        completed: false
+    }, {
+        $set: {
+            completed: true
+        }
+    }).then((result) => {
+        console.log(result.modifiedCount)
+    }).catch((error) => {
+        console.log(error)
+    })
 })
 

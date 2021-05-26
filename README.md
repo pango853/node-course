@@ -65,8 +65,7 @@ Deploying Node.js to Heroku
 New Feature Deployument Workflow
 Avoiding Global Modules
 
-Promises
-Updating documents
+
 Deleting documents
 
 REST APIs and Mongoose
